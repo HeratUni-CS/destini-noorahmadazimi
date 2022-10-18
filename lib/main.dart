@@ -61,7 +61,7 @@ class _StoryPageState extends State<StoryPage> {
                 child: TextButton(
                   onPressed: () {
                     setState(() {
-
+                     
                     });
                     //Choice 1 made by user.
                     //TODO: Step 18 - Call the nextStory() method from storyBrain and pass the number 1 as the choice made by the user.
@@ -92,13 +92,13 @@ class _StoryPageState extends State<StoryPage> {
                       //Choice 2 made by user.
                       //TODO: Step 19 - Call the nextStory() method from storyBrain and pass the number 2 as the choice made by the user.
                       setState(() {
-                        
+
                       });
                     },
                     style: TextButton.styleFrom(backgroundColor: Colors.blue),
                     child: Text(
                       //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
-                      first.getChoice1(),
+                      first.getChoice2(),
                       style: TextStyle(
                         fontSize: 20.0,
                         color: Colors.white,

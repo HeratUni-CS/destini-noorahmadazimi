@@ -43,5 +43,8 @@ class StoryBrain {
   getChoice1(){
     return _storyData[_storyNumber].choice1;
   }
+  getChoice2(){
+  return _storyData[_storyNumber].choice2;
+  }
 
 }
