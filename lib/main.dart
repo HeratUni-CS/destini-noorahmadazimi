@@ -61,7 +61,7 @@ class _StoryPageState extends State<StoryPage> {
                 child: TextButton(
                   onPressed: () {
                     setState(() {
-                     
+                      first.nextStory(Random().nextInt(6));
                     });
                     //Choice 1 made by user.
                     //TODO: Step 18 - Call the nextStory() method from storyBrain and pass the number 1 as the choice made by the user.
@@ -86,13 +86,13 @@ class _StoryPageState extends State<StoryPage> {
                 //TODO: Step 26 - Use a Flutter Visibility Widget to wrap this TextButton.
                 //TODO: Step 28 - Set the "visible" property of the Visibility Widget to equal the output from the buttonShouldBeVisible() method in the storyBrain.
                 child:Visibility(
-
+                  visible: first.buttonShouldBeVisible(),
                   child: TextButton(
                     onPressed: () {
                       //Choice 2 made by user.
                       //TODO: Step 19 - Call the nextStory() method from storyBrain and pass the number 2 as the choice made by the user.
                       setState(() {
-
+                        first.nextStory(Random().nextInt(6));
                       });
                     },
                     style: TextButton.styleFrom(backgroundColor: Colors.blue),

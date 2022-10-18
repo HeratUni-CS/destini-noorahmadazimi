@@ -46,5 +46,31 @@ class StoryBrain {
   getChoice2(){
   return _storyData[_storyNumber].choice2;
   }
+ void nextStory(int choiceNumber){
+    if(choiceNumber==1 && _storyNumber==0){
+      _storyNumber=2;
 
+    }else if(choiceNumber==2 && _storyNumber==0){
+       _storyNumber=3;
+    }
+    else if((choiceNumber==3 || choiceNumber==4 || choiceNumber==5)&& _storyNumber==0){
+       restart();
+    }
+    else{
+      restart();
+    }
+
+  }
+  void restart(){
+    _storyNumber=0;
+  }
+  buttonShouldBeVisible(){
+    if(_storyNumber==0 || _storyNumber==1 || _storyNumber==2){
+
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
 }
